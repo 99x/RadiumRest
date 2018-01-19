@@ -39,7 +39,11 @@ namespace RadiumRest.DotNetCoreServer
                 portNumber = 9000;
 
 
-            WebHost.CreateDefaultBuilder().UseStartup<Startup>().Build().Run();
+            WebHost.CreateDefaultBuilder()
+                .UseStartup<Startup>()
+                .UseUrls("http://localhost:" + portNumber +"/")
+                .Build()
+                .Run();
 
         }
 
