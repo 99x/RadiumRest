@@ -11,4 +11,10 @@
     <ProjectReference Include="..\RadiumRest.DotNetCoreServer\RadiumRest.DotNetCoreServer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="radiumrest.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
