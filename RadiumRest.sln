@@ -3,11 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadiumRest.Core", "RadiumRest.Core\RadiumRest.Core.csproj", "{3956097D-F3A4-458E-8335-A8B5F2D5BF33}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadiumRest.Core", "RadiumRest.Core\RadiumRest.Core.csproj", "{AD344DD7-84CC-4FBE-B3EC-BBF77A0C4897}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadiumRest.Server", "RadiumRest.Server\RadiumRest.Server.csproj", "{255117D8-D0FD-4298-997D-93629E4CDAEC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadiumRest.Owin", "RadiumRest.Owin\RadiumRest.Owin.csproj", "{DA49A224-B053-4486-8834-E2132B021324}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadiumRest.Sample", "RadiumRest.Sample\RadiumRest.Sample.csproj", "{6D358147-FFDB-4A62-8426-49F820690023}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadiumRest.OwinServer", "RadiumRest.OwinServer\RadiumRest.OwinServer.csproj", "{D6A958B7-F7BE-46F0-BCD2-A7D523DC52ED}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RadiumRest.DotNetCoreServer", "RadiumRest.DotNetCoreServer\RadiumRest.DotNetCoreServer.csproj", "{8D5DD970-EF51-4482-9172-48B74A8581E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadiumRest.CustomerMicroservice", "RadiumRest.CustomerMicroservice\RadiumRest.CustomerMicroservice.csproj", "{D6341D6B-BE56-4382-AEB6-2D4295187614}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RadiumRest.DotNetCoreSample", "RadiumRest.DotNetCoreSample\RadiumRest.DotNetCoreSample.csproj", "{4DD1EB2F-C2CB-4C97-9FDE-4AAD03285C35}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{F1005D39-AADB-45FE-AF26-970C47CEEF69}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{E5A18A04-4C9D-41A6-8F9F-CD9C3B30A1E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadiumRest.DotNetFrameworkSample", "RadiumRest.DotNetFrameworkSample\RadiumRest.DotNetFrameworkSample.csproj", "{6D358147-FFDB-4A62-8426-49F820690023}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,14 +27,30 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3956097D-F3A4-458E-8335-A8B5F2D5BF33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3956097D-F3A4-458E-8335-A8B5F2D5BF33}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3956097D-F3A4-458E-8335-A8B5F2D5BF33}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3956097D-F3A4-458E-8335-A8B5F2D5BF33}.Release|Any CPU.Build.0 = Release|Any CPU
-		{255117D8-D0FD-4298-997D-93629E4CDAEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{255117D8-D0FD-4298-997D-93629E4CDAEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{255117D8-D0FD-4298-997D-93629E4CDAEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{255117D8-D0FD-4298-997D-93629E4CDAEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD344DD7-84CC-4FBE-B3EC-BBF77A0C4897}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD344DD7-84CC-4FBE-B3EC-BBF77A0C4897}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD344DD7-84CC-4FBE-B3EC-BBF77A0C4897}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD344DD7-84CC-4FBE-B3EC-BBF77A0C4897}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA49A224-B053-4486-8834-E2132B021324}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA49A224-B053-4486-8834-E2132B021324}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA49A224-B053-4486-8834-E2132B021324}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA49A224-B053-4486-8834-E2132B021324}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6A958B7-F7BE-46F0-BCD2-A7D523DC52ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6A958B7-F7BE-46F0-BCD2-A7D523DC52ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6A958B7-F7BE-46F0-BCD2-A7D523DC52ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6A958B7-F7BE-46F0-BCD2-A7D523DC52ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D5DD970-EF51-4482-9172-48B74A8581E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D5DD970-EF51-4482-9172-48B74A8581E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D5DD970-EF51-4482-9172-48B74A8581E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D5DD970-EF51-4482-9172-48B74A8581E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6341D6B-BE56-4382-AEB6-2D4295187614}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6341D6B-BE56-4382-AEB6-2D4295187614}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6341D6B-BE56-4382-AEB6-2D4295187614}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6341D6B-BE56-4382-AEB6-2D4295187614}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DD1EB2F-C2CB-4C97-9FDE-4AAD03285C35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DD1EB2F-C2CB-4C97-9FDE-4AAD03285C35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DD1EB2F-C2CB-4C97-9FDE-4AAD03285C35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DD1EB2F-C2CB-4C97-9FDE-4AAD03285C35}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6D358147-FFDB-4A62-8426-49F820690023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6D358147-FFDB-4A62-8426-49F820690023}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D358147-FFDB-4A62-8426-49F820690023}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -30,6 +58,15 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AD344DD7-84CC-4FBE-B3EC-BBF77A0C4897} = {E5A18A04-4C9D-41A6-8F9F-CD9C3B30A1E1}
+		{DA49A224-B053-4486-8834-E2132B021324} = {E5A18A04-4C9D-41A6-8F9F-CD9C3B30A1E1}
+		{D6A958B7-F7BE-46F0-BCD2-A7D523DC52ED} = {E5A18A04-4C9D-41A6-8F9F-CD9C3B30A1E1}
+		{8D5DD970-EF51-4482-9172-48B74A8581E5} = {E5A18A04-4C9D-41A6-8F9F-CD9C3B30A1E1}
+		{D6341D6B-BE56-4382-AEB6-2D4295187614} = {F1005D39-AADB-45FE-AF26-970C47CEEF69}
+		{4DD1EB2F-C2CB-4C97-9FDE-4AAD03285C35} = {F1005D39-AADB-45FE-AF26-970C47CEEF69}
+		{6D358147-FFDB-4A62-8426-49F820690023} = {F1005D39-AADB-45FE-AF26-970C47CEEF69}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B10465E0-BBC6-4C17-B17C-BE61DD95B0F8}

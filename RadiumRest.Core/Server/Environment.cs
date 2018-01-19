@@ -8,15 +8,15 @@ using System.Reflection;
 using Newtonsoft.Json;
 using System.IO;
 
-namespace RadiumRest.Server
+namespace RadiumRest.Core.Server
 {
-    internal class Environment
+    public class Environment
     {
 
         private const string configFileName = "radiumrest.json";
 
         private string executingPath;
-        internal string ExecutingPath
+        public string ExecutingPath
         {
             get
             {
@@ -31,7 +31,7 @@ namespace RadiumRest.Server
         }
 
         private Dictionary<string, object> configuration;
-        internal Dictionary<string, object> Configuration
+        public Dictionary<string, object> Configuration
         {
             get
             {
@@ -60,7 +60,7 @@ namespace RadiumRest.Server
 
         }
 
-        internal void Load()
+        public void Load()
         {
             var tmp = this.Configuration;
         }

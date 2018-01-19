@@ -6,17 +6,16 @@ using System.Reflection;
 using System.Threading.Tasks;
 
 using Newtonsoft.Json;
-using Microsoft.Owin;
 
 using RadiumRest.Core.ServiceRepo;
 using RadiumRest.Core.Messaging;
 
 namespace RadiumRest.Core
 {
-    internal static class ServiceInvoker
+    public static class ServiceInvoker
     {
 
-        internal static Task Invoke(Kernel kernel, IOwinContext context)
+        public static Task Invoke(Kernel kernel, RadiumContext context)
         {
             DefaultResponseBody responseBody = new DefaultResponseBody();
 

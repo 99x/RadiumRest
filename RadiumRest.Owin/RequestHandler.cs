@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 using Microsoft.Owin;
 using Owin;
 
-using RadiumRest.Core.Filters;
+using RadiumRest.Core;
+using RadiumRest.Core.Messaging;
 
-namespace RadiumRest.Core
+namespace RadiumRest.Owin
 {
     public class RequestHandler
     {
@@ -23,7 +24,7 @@ namespace RadiumRest.Core
         {
             app.Run(context =>
             {
-                return ServiceInvoker.Invoke(this.kernel, context);
+                return ServiceInvoker.Invoke(this.kernel, new OwinRadiumContext(context));
             });
         }
     }

@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Web;
 
-using Microsoft.Owin;
+using RadiumRest.Core.Messaging;
 
 namespace RadiumRest
 {
     public class RestResourceHandler
     {
-        protected IOwinRequest Request { get; private set; }
+        protected RadiumRequest Request { get; private set; }
 
-        protected IOwinResponse Response { get; private set; }
+        protected RadiumResponse Response { get; private set; }
 
-        private IOwinContext owinContext;
-        internal IOwinContext OContext
+        private RadiumContext owinContext;
+        internal RadiumContext OContext
         {
             set
             {
@@ -24,7 +24,7 @@ namespace RadiumRest
                 this.Response = value.Response;
             }
         }
-        protected IOwinContext OwinContext
+        protected RadiumContext OwinContext
         {
             get
             {
