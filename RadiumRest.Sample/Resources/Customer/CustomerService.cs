@@ -17,7 +17,13 @@ namespace RadiumRest.Sample.Resources.Customer
         public CustomerModel GetCustomer(int id)
         {
             var customerRepository = new CustomerRepository();
-            return customerRepository.GetCustomerById(id);
+            var customerObj = customerRepository.GetCustomerById(id);
+
+            if (customerObj== null) {
+                Response.StatusCode = 403;
+            }
+            
+            return customerObj;
         }
 
         [RestPath("GET")]

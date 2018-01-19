@@ -51,6 +51,7 @@ namespace RadiumRest.Core
                     else
                     {
                         RestResourceHandler newObj = (RestResourceHandler)Activator.CreateInstance(exeParams.ExecutionInfo.Type);
+                        newObj.OContext = context;
                         newObj.DataBag = chainResponse.FilterResponse;
                         var exeMethod = exeParams.ExecutionInfo.Method;
                         List<object> activatorParams = new List<object>();
