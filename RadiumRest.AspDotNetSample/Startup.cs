@@ -1,18 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web;
 
+using RadiumRest.AspDotNet;
 
-using RadiumRest.Core;
-
-namespace RadiumRest.AspDotNet
+namespace RadiumRest.AspDotNetSample
 {
-    public class RequestDispatcher : IHttpHandler
+    public class Startup : IHttpHandler
     {
-
         public bool IsReusable
         {
             get { return false; }
@@ -20,7 +16,8 @@ namespace RadiumRest.AspDotNet
 
         public void ProcessRequest(HttpContext context)
         {
-            ServiceInvoker.Invoke(RadiumAspService.Kernel, new Messaging.ASPRadiumContext(context));
+            var tmp = new RadiumRest.CustomerMicroservice.Resources.Customer.CustomerModel();
+            ASPRequestHandler.Handle(context);
         }
     }
 }

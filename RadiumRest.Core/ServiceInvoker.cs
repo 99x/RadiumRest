@@ -24,7 +24,7 @@ namespace RadiumRest.Core
 
 
             string reqContentType = req.ContentType;
-            if (reqContentType == null)
+            if (String.IsNullOrEmpty(reqContentType))
                 reqContentType = "application/json";
             else
                 reqContentType = reqContentType.ToLower();

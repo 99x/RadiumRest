@@ -17,6 +17,15 @@ namespace RadiumRest.Core
         internal FilterManager FilterManager { get; private set; }
         internal ResponseFormatter ResponseFormatter { get; private set; }
 
+        private Assembly callingAssembly;
+
+        public Kernel(Assembly callingAssembly)
+        {
+            this.callingAssembly = callingAssembly;
+            this.FilterManager = new FilterManager();
+            this.ResponseFormatter = new ResponseFormatter();
+        }
+
         public Kernel()
         {
             this.FilterManager = new FilterManager();
@@ -24,9 +33,19 @@ namespace RadiumRest.Core
         }
         public void Initialize()
         {
-            Assembly asm = Assembly.GetEntryAssembly();
-            if (asm == null)
-                asm = Assembly.GetCallingAssembly();
+            Assembly asm;
+
+            if (callingAssembly == null)
+            {
+                asm = Assembly.GetEntryAssembly();
+                if (asm == null)
+                    asm = Assembly.GetCallingAssembly();
+            }
+            else
+            {
+                asm = callingAssembly;
+            }
+
 
             ServiceRepository.Initialize(asm);
         }

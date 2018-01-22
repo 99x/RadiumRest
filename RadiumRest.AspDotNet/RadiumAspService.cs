@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reflection;
 
 using RadiumRest.Core;
 
@@ -16,18 +17,15 @@ namespace RadiumRest.AspDotNet
         {
             get
             {
-                if (_kernel == null)
-                {
-                    _kernel = new Kernel();
-                    _kernel.Initialize();
-                }
-
                 return _kernel;
             }
             set
             {
                 _kernel = value;
+                _kernel.Initialize();
             }
         }
+
+
     }
 }
