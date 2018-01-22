@@ -73,7 +73,6 @@
     <Compile Include="Attributes\RestResource.cs" />
     <Compile Include="Attributes\RestPath.cs" />
     <Compile Include="ResourceHandler\RestResourceHandler.cs" />
-    <Compile Include="ResourceHandler\RestResourceHandlerGeneric.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -17,7 +17,8 @@ namespace RadiumRest.AspDotNetSample
         public void ProcessRequest(HttpContext context)
         {
             var tmp = new RadiumRest.CustomerMicroservice.Resources.Customer.CustomerModel();
-            ASPRequestHandler.Handle(context);
+            var requestHandler = new ASPRequestHandler();
+            requestHandler.Handle(context);
         }
     }
 }

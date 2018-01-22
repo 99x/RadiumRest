@@ -11,7 +11,7 @@ namespace RadiumRest.Core.ServiceRepo
 
         internal static ServiceRepository Repo;
 
-        private Dictionary<string, Dictionary<string, PathExecutionInfo>> pathExecutionInfo;
+        private static Dictionary<string, Dictionary<string, PathExecutionInfo>> pathExecutionInfo = new Dictionary<string, Dictionary<string, PathExecutionInfo>>();
 
         internal PathExecutionParams this[string method, string reqUrl]
         {
@@ -80,7 +80,7 @@ namespace RadiumRest.Core.ServiceRepo
 
 
 
-        internal void AddExecutionInfo(string method, string reqUrl, PathExecutionInfo value)
+        internal static void AddExecutionInfo(string method, string reqUrl, PathExecutionInfo value)
         {
             Dictionary<string, PathExecutionInfo> methodDic;
 
@@ -95,17 +95,12 @@ namespace RadiumRest.Core.ServiceRepo
                 methodDic.Add(reqUrl, value);
         }
 
-        internal ServiceRepository()
-        {
-            this.pathExecutionInfo = new Dictionary<string, Dictionary<string, PathExecutionInfo>>();
-        }
-
 
         internal static void Initialize(Assembly callingAssembly)
         {
             Repo = new ServiceRepository();
 
-            var ignoreAssemblies = new string[] {"RadiumRest.Core", "RadiumRest.Selfhost", "mscorlib"};
+            var ignoreAssemblies = new string[] {"RadiumRest", "RadiumRest.Core", "RadiumRest.Selfhost", "mscorlib"};
             var referencedAssemblies = callingAssembly.GetReferencedAssemblies();
             var currentAsm = Assembly.GetExecutingAssembly().GetName();
 
@@ -158,7 +153,7 @@ namespace RadiumRest.Core.ServiceRepo
                                     PathExecutionInfo exeInfo = new PathExecutionInfo();
                                     exeInfo.Type = typ;
                                     exeInfo.Method = method;
-                                    Repo.AddExecutionInfo(finalMethod, finalUrl, exeInfo);
+                                    AddExecutionInfo(finalMethod, finalUrl, exeInfo);
                                 }
                             }
                         }
