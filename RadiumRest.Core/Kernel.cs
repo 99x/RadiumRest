@@ -24,7 +24,11 @@ namespace RadiumRest.Core
         }
         public void Initialize()
         {
-            ServiceRepository.Initialize(Assembly.GetEntryAssembly());
+            Assembly asm = Assembly.GetEntryAssembly();
+            if (asm == null)
+                asm = Assembly.GetCallingAssembly();
+
+            ServiceRepository.Initialize(asm);
         }
 
         public void RegisterFilter<T>() where T: AbstractFilter
