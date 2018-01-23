@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadiumRest.Core", "RadiumRest.Core\RadiumRest.Core.csproj", "{AD344DD7-84CC-4FBE-B3EC-BBF77A0C4897}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadiumRest.Plugin.Owin", "RadiumRest.Owin\RadiumRest.Plugin.Owin.csproj", "{DA49A224-B053-4486-8834-E2132B021324}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadiumRest.Owin", "RadiumRest.Owin\RadiumRest.Owin.csproj", "{DA49A224-B053-4486-8834-E2132B021324}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadiumRest.Plugin.Owin", "RadiumRest.OwinServer\RadiumRest.Plugin.Owin.csproj", "{D6A958B7-F7BE-46F0-BCD2-A7D523DC52ED}"
 EndProject

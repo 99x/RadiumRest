@@ -9,7 +9,7 @@ using Microsoft.Owin;
 using RadiumRest.Core.Messaging;
 
 
-namespace RadiumRest.Plugin.Owin
+namespace RadiumRest.Owin
 {
     public class OwinRadiumResponse : RadiumResponse, IOwinResponse
     {

@@ -7,7 +7,7 @@ using Newtonsoft.Json.Linq;
 
 using RadiumRest.Core;
 using RadiumRest.Core.Plugin;
-using RadiumRest.Plugin.Owin;
+using RadiumRest.Owin;
 
 namespace RadiumRest.Plugin.Owin
 {

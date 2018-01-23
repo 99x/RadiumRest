@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using Microsoft.Owin;
 using RadiumRest.Core.Messaging;
 
-namespace RadiumRest.Plugin.Owin
+namespace RadiumRest.Owin
 {
     public class OwinRadiumRequest : RadiumRequest, IOwinRequest
     {
