@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace RadiumRest.Core.ServiceRepo
+namespace RadiumRest.Core.ResourceRepo
 {
     public class ParameterMismatchException: Exception
     {

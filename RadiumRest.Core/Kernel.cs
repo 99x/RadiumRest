@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Reflection;
 
-using RadiumRest.Core.ServiceRepo;
+using RadiumRest.Core.ResourceRepo;
 using RadiumRest.Core.Filters;
 using RadiumRest.Core.Formatters;
 
@@ -47,7 +47,7 @@ namespace RadiumRest.Core
             }
 
 
-            ServiceRepository.Initialize(asm);
+            ResourceRepository.Initialize(asm);
         }
 
         public void RegisterFilter<T>() where T: AbstractFilter

@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Reflection;
 
-namespace RadiumRest.Core.ServiceRepo
+namespace RadiumRest.Core.ResourceRepo
 {
-    internal class ServiceRepository
+    internal class ResourceRepository
     {
 
-        internal static ServiceRepository Repo;
+        internal static ResourceRepository Repo;
 
         private static Dictionary<string, Dictionary<string, PathExecutionInfo>> pathExecutionInfo = new Dictionary<string, Dictionary<string, PathExecutionInfo>>();
 
@@ -100,7 +100,7 @@ namespace RadiumRest.Core.ServiceRepo
 
         internal static void Initialize(Assembly callingAssembly)
         {
-            Repo = new ServiceRepository();
+            Repo = new ResourceRepository();
 
             var ignoreAssemblies = new string[] {"RadiumRest", "RadiumRest.Core", "RadiumRest.Selfhost", "mscorlib"};
             var referencedAssemblies = callingAssembly.GetReferencedAssemblies();

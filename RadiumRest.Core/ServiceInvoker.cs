@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 using Newtonsoft.Json;
 
-using RadiumRest.Core.ServiceRepo;
+using RadiumRest.Core.ResourceRepo;
 using RadiumRest.Core.Messaging;
 
 namespace RadiumRest.Core
@@ -29,7 +29,7 @@ namespace RadiumRest.Core
             else
                 reqContentType = reqContentType.ToLower();
 
-            PathExecutionParams exeParams = ServiceRepository.Repo[req.Method, req.Path.Value];
+            PathExecutionParams exeParams = ResourceRepository.Repo[req.Method, req.Path.Value];
 
             try
             {

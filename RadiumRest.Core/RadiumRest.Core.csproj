@@ -65,10 +65,10 @@
     <Compile Include="Plugin\Environment.cs" />
     <Compile Include="Plugin\RadiumPlugin.cs" />
     <Compile Include="RadiumService.cs" />
-    <Compile Include="ServiceRepo\ParameterMismatchException.cs" />
-    <Compile Include="ServiceRepo\PathExecutionInfo.cs" />
-    <Compile Include="ServiceRepo\PathExecutionParams.cs" />
-    <Compile Include="ServiceRepo\ServiceRepository.cs" />
+    <Compile Include="ResourceRepo\ParameterMismatchException.cs" />
+    <Compile Include="ResourceRepo\PathExecutionInfo.cs" />
+    <Compile Include="ResourceRepo\PathExecutionParams.cs" />
+    <Compile Include="ResourceRepo\ResourceRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceInvoker.cs" />
     <Compile Include="Attributes\RestResource.cs" />
