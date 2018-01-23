@@ -18,9 +18,9 @@ namespace RadiumRest.Sample.AspDotNet
 
         public void ProcessRequest(HttpContext context)
         {
-            RadiumServer.Use<RadiumRest.Sample.CustomerMicroservice.Resources.Customer.CustomerModel>();
+            RadiumService.Use<RadiumRest.Sample.CustomerMicroservice.Resources.Customer.CustomerModel>();
 
-            var server = RadiumServer.Create<AspDotNetRadiumPlugin>();
+            var server = RadiumService.Create<AspDotNetRadiumPlugin>();
             server.Handle(context);
         }
     }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace RadiumRest
 {
-    public static class RadiumServer
+    public static class RadiumService
     {
         public static T Create<T>() where T: RadiumRest.Core.Plugin.RadiumPlugin
         {

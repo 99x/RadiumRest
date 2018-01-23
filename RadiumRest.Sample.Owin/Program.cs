@@ -15,9 +15,9 @@ namespace RadiumRest.Sample.Owin
     {
         public static void Main(string[] args)
         {
-            RadiumServer.Use<CustomerMicroservice.Resources.Customer.CustomerModel>();
+            RadiumService.Use<CustomerMicroservice.Resources.Customer.CustomerModel>();
 
-            var server = RadiumServer.Create<OwinRadiumPlugin>();
+            var server = RadiumService.Create<OwinRadiumPlugin>();
             server.Start();
         }
     }

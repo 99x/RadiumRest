@@ -15,9 +15,9 @@ namespace RadiumRest.Sample.DotNetCore
     {
         public static void Main(string[] args)
         {
-            RadiumServer.Use<CustomerMicroservice.Resources.Customer.CustomerModel>();
+            RadiumService.Use<CustomerMicroservice.Resources.Customer.CustomerModel>();
 
-            var server = RadiumServer.Create<DotNetCoreRadiumPlugin>();
+            var server = RadiumService.Create<DotNetCoreRadiumPlugin>();
             server.Start();
         }
     }
