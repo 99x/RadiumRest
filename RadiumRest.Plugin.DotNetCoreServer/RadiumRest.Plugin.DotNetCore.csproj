@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RadiumRest.Core\RadiumRest.Core.csproj" />
-    <ProjectReference Include="..\RadiumRest.CustomerMicroservice\RadiumRest.CustomerMicroservice.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using RadiumRest;
 
-namespace RadiumRest.CustomerMicroservice.Resources.Customer
+namespace RadiumRest.Sample.CustomerMicroservice.Resources.Customer
 {
 
     [RestResource("customers")]

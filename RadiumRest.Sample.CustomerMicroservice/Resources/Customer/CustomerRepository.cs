@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RadiumRest.CustomerMicroservice.Resources.Customer
+namespace RadiumRest.Sample.CustomerMicroservice.Resources.Customer
 {
     public class CustomerRepository
     {

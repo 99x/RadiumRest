@@ -5,17 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 
 using RadiumRest.Core;
-using RadiumRest.Plugin.DotNetCore;
-using RadiumRest.CustomerMicroservice;
+using RadiumRest.Plugin.Owin;
+using RadiumRest.Sample.CustomerMicroservice;
 
-namespace RadiumRest.Sample
+namespace RadiumRest.Sample.Owin
 {
     public class Program
     {
         public static void Main(string[] args)
         {
             var tmp = new CustomerMicroservice.Resources.Customer.CustomerModel();
-            var server = new DotNetCoreRadiumPlugin();
+            var server = new OwinRadiumPlugin();
             server.Start();
         }
     }

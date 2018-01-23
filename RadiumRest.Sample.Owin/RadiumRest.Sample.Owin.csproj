@@ -73,11 +73,15 @@
       <Project>{ad344dd7-84cc-4fbe-b3ec-bbf77a0c4897}</Project>
       <Name>RadiumRest.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\RadiumRest.CustomerMicroservice\RadiumRest.CustomerMicroservice.csproj">
+    <ProjectReference Include="..\RadiumRest.Sample.CustomerMicroservice\RadiumRest.Sample.CustomerMicroservice.csproj">
       <Project>{d6341d6b-be56-4382-aeb6-2d4295187614}</Project>
       <Name>RadiumRest.CustomerMicroservice</Name>
     </ProjectReference>
-    <ProjectReference Include="..\RadiumRest.OwinServer\RadiumRest.Plugin.Owin.csproj">
+    <ProjectReference Include="..\RadiumRest.Owin\RadiumRest.Owin.csproj">
+      <Project>{da49a224-b053-4486-8834-e2132b021324}</Project>
+      <Name>RadiumRest.Owin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RadiumRest.Plugin.OwinServer\RadiumRest.Plugin.Owin.csproj">
       <Project>{d6a958b7-f7be-46f0-bcd2-a7d523dc52ed}</Project>
       <Name>RadiumRest.Plugin.Owin</Name>
     </ProjectReference>

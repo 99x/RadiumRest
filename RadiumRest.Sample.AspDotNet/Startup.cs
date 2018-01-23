@@ -5,7 +5,7 @@ using System.Web;
 
 using RadiumRest.Plugin.AspDotNet;
 
-namespace RadiumRest.AspDotNetSample
+namespace RadiumRest.Sample.AspDotNet
 {
     public class Startup : IHttpHandler
     {
@@ -16,7 +16,7 @@ namespace RadiumRest.AspDotNetSample
 
         public void ProcessRequest(HttpContext context)
         {
-            var tmp = new RadiumRest.CustomerMicroservice.Resources.Customer.CustomerModel();
+            var tmp = new RadiumRest.Sample.CustomerMicroservice.Resources.Customer.CustomerModel();
             var requestHandler = new AspDotNetRadiumPlugin();
             requestHandler.Handle(context);
         }
