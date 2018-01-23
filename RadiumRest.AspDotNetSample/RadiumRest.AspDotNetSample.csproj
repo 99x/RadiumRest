@@ -85,9 +85,9 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RadiumRest.AspDotNet\RadiumRest.AspDotNet.csproj">
+    <ProjectReference Include="..\RadiumRest.AspDotNet\RadiumRest.Plugin.AspDotNet.csproj">
       <Project>{6eaa30d0-478f-4cbe-bd04-6fb5b72183a0}</Project>
-      <Name>RadiumRest.AspDotNet</Name>
+      <Name>RadiumRest.Plugin.AspDotNet</Name>
     </ProjectReference>
     <ProjectReference Include="..\RadiumRest.Core\RadiumRest.Core.csproj">
       <Project>{ad344dd7-84cc-4fbe-b3ec-bbf77a0c4897}</Project>

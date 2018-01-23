@@ -7,16 +7,16 @@ using Newtonsoft.Json.Linq;
 
 using RadiumRest.Core;
 
-namespace RadiumRest.Core.Server
+namespace RadiumRest.Core.Plugin
 {
-    public abstract class RadiumServer
+    public abstract class RadiumPlugin
     {
         public Kernel Kernel { get; internal set; }
 
         protected Environment Environment { get; private set; }
         protected JObject ServerSettings { get; set; }
 
-        public RadiumServer()
+        public RadiumPlugin()
         {
             this.Environment = new Environment();
             this.Kernel = new Kernel();
@@ -25,7 +25,7 @@ namespace RadiumRest.Core.Server
             this.Kernel.Initialize();
         }
 
-        public RadiumServer(bool useLazyInitializing)
+        public RadiumPlugin(bool useLazyInitializing)
         {
 
         }

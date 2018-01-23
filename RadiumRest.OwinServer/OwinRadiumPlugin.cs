@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 
 using RadiumRest.Core;
-using RadiumRest.Core.Server;
-using RadiumRest.Owin;
+using RadiumRest.Core.Plugin;
+using RadiumRest.Plugin.Owin;
 
-namespace RadiumRest.OwinServer
+namespace RadiumRest.Plugin.Owin
 {
-    public class OwinRadiumServer: RadiumServer
+    public class OwinRadiumPlugin: RadiumPlugin
     {
         protected override void Listen()
         {

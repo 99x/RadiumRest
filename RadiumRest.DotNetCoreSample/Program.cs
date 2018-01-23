@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using RadiumRest.Core;
-using RadiumRest.DotNetCoreServer;
+using RadiumRest.Plugin.DotNetCore;
 using RadiumRest.CustomerMicroservice;
 
 namespace RadiumRest.Sample
@@ -15,7 +15,7 @@ namespace RadiumRest.Sample
         public static void Main(string[] args)
         {
             var tmp = new CustomerMicroservice.Resources.Customer.CustomerModel();
-            var server = new DotNetCoreServer.DotNetCoreServer();
+            var server = new DotNetCoreRadiumPlugin();
             server.Start();
         }
     }

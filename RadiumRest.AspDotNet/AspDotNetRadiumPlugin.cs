@@ -7,11 +7,11 @@ using System.Reflection;
 using System.Web;
 
 using RadiumRest.Core;
-using RadiumRest.Core.Server;
+using RadiumRest.Core.Plugin;
 
-namespace RadiumRest.AspDotNet
+namespace RadiumRest.Plugin.AspDotNet
 {
-    public class ASPRequestHandler: RadiumServer
+    public class AspDotNetRadiumPlugin: RadiumPlugin
     {
         public void Handle(HttpContext context)
         {

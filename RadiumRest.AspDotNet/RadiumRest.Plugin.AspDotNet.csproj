@@ -7,8 +7,8 @@
     <ProjectGuid>{6EAA30D0-478F-4CBE-BD04-6FB5B72183A0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RadiumRest.AspDotNet</RootNamespace>
-    <AssemblyName>RadiumRest.AspDotNet</AssemblyName>
+    <RootNamespace>RadiumRest.Plugin.AspDotNet</RootNamespace>
+    <AssemblyName>RadiumRest.Plugin.AspDotNet</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ASPRequestHandler.cs" />
+    <Compile Include="AspDotNetRadiumPlugin.cs" />
     <Compile Include="Messaging\ASPRadiumContext.cs" />
     <Compile Include="Messaging\ASPRadiumRequest.cs" />
     <Compile Include="Messaging\ASPRadiumRequestPath.cs" />

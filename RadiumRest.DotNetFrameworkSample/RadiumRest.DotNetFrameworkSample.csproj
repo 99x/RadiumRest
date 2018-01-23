@@ -77,9 +77,9 @@
       <Project>{d6341d6b-be56-4382-aeb6-2d4295187614}</Project>
       <Name>RadiumRest.CustomerMicroservice</Name>
     </ProjectReference>
-    <ProjectReference Include="..\RadiumRest.OwinServer\RadiumRest.OwinServer.csproj">
+    <ProjectReference Include="..\RadiumRest.OwinServer\RadiumRest.Plugin.Owin.csproj">
       <Project>{d6a958b7-f7be-46f0-bcd2-a7d523dc52ed}</Project>
-      <Name>RadiumRest.OwinServer</Name>
+      <Name>RadiumRest.Plugin.Owin</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

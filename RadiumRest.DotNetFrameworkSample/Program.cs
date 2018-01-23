@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using RadiumRest.Core;
-using RadiumRest.OwinServer;
+using RadiumRest.Plugin.Owin;
 using RadiumRest.CustomerMicroservice;
 
 namespace RadiumRest.Sample
@@ -15,7 +15,7 @@ namespace RadiumRest.Sample
         public static void Main(string[] args)
         {
             var tmp = new CustomerMicroservice.Resources.Customer.CustomerModel();
-            var server = new OwinRadiumServer();
+            var server = new OwinRadiumPlugin();
             server.Start();
         }
     }

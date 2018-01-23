@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 using RadiumRest.Core.Messaging;
 
-namespace RadiumRest.DotNetCoreServer.Messsaging
+namespace RadiumRest.Plugin.DotNetCore.Messsaging
 {
     public class DCRadiumContext : RadiumContext
     {

@@ -9,7 +9,7 @@ using RadiumRest.Core.Messaging;
 
 using Microsoft.AspNetCore.Http;
 
-namespace RadiumRest.DotNetCoreServer.Messsaging
+namespace RadiumRest.Plugin.DotNetCore.Messsaging
 {
     public class DCRadiumResponse : RadiumResponse
     {

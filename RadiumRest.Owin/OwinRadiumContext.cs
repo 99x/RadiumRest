@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 using RadiumRest.Core.Messaging;
 
-namespace RadiumRest.Owin
+namespace RadiumRest.Plugin.Owin
 {
     public class OwinRadiumContext : RadiumContext
     {

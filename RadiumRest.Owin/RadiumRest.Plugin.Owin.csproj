@@ -7,8 +7,8 @@
     <ProjectGuid>{DA49A224-B053-4486-8834-E2132B021324}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RadiumRest.Owin</RootNamespace>
-    <AssemblyName>RadiumRest.Owin</AssemblyName>
+    <RootNamespace>RadiumRest.Plugin.Owin</RootNamespace>
+    <AssemblyName>RadiumRest.Plugin.Owin</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

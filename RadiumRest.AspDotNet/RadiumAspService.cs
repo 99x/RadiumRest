@@ -7,7 +7,7 @@ using System.Reflection;
 
 using RadiumRest.Core;
 
-namespace RadiumRest.AspDotNet
+namespace RadiumRest.Plugin.AspDotNet
 {
     public static class RadiumAspService
     {

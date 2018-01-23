@@ -7,7 +7,7 @@ using System.Web;
 
 using RadiumRest.Core.Messaging;
 
-namespace RadiumRest.AspDotNet.Messaging
+namespace RadiumRest.Plugin.AspDotNet.Messaging
 {
     public class ASPRadiumRequestPath: RadiumRequestPath
     {

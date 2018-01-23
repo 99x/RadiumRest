@@ -8,7 +8,7 @@ using Microsoft.Owin;
 using RadiumRest.Core.Messaging;
 
 
-namespace RadiumRest.Owin
+namespace RadiumRest.Plugin.Owin
 {
     public class OwinRadiumRequestPath: RadiumRequestPath
     {

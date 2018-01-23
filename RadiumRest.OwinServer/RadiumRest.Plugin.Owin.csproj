@@ -7,8 +7,8 @@
     <ProjectGuid>{D6A958B7-F7BE-46F0-BCD2-A7D523DC52ED}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RadiumRest.OwinServer</RootNamespace>
-    <AssemblyName>RadiumRest.OwinServer</AssemblyName>
+    <RootNamespace>RadiumRest.Plugin.Owin</RootNamespace>
+    <AssemblyName>RadiumRest.Plugin.Owin</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -59,7 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OwinRadiumServer.cs" />
+    <Compile Include="OwinRadiumPlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -70,9 +70,9 @@
       <Project>{ad344dd7-84cc-4fbe-b3ec-bbf77a0c4897}</Project>
       <Name>RadiumRest.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\RadiumRest.Owin\RadiumRest.Owin.csproj">
+    <ProjectReference Include="..\RadiumRest.Owin\RadiumRest.Plugin.Owin.csproj">
       <Project>{da49a224-b053-4486-8834-e2132b021324}</Project>
-      <Name>RadiumRest.Owin</Name>
+      <Name>RadiumRest.Plugin.Owin</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

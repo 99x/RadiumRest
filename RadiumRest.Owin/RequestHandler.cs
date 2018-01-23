@@ -10,7 +10,7 @@ using Owin;
 using RadiumRest.Core;
 using RadiumRest.Core.Messaging;
 
-namespace RadiumRest.Owin
+namespace RadiumRest.Plugin.Owin
 {
     public class RequestHandler
     {

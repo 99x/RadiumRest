@@ -8,7 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 using RadiumRest.Core;
 
-namespace RadiumRest.DotNetCoreServer
+namespace RadiumRest.Plugin.DotNetCore
 {
     public class Startup
     {
@@ -25,7 +25,7 @@ namespace RadiumRest.DotNetCoreServer
             
             app.Run(async (context) =>
             {
-                await ServiceInvoker.Invoke(DotNetCoreServer.KernalInstance, new Messsaging.DCRadiumContext(context));
+                await ServiceInvoker.Invoke(DotNetCoreRadiumPlugin.KernalInstance, new Messsaging.DCRadiumContext(context));
             });
         }
     }

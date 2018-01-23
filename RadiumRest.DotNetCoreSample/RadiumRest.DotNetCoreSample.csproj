@@ -8,7 +8,7 @@
   <ItemGroup>
     <ProjectReference Include="..\RadiumRest.Core\RadiumRest.Core.csproj" />
     <ProjectReference Include="..\RadiumRest.CustomerMicroservice\RadiumRest.CustomerMicroservice.csproj" />
-    <ProjectReference Include="..\RadiumRest.DotNetCoreServer\RadiumRest.DotNetCoreServer.csproj" />
+    <ProjectReference Include="..\RadiumRest.DotNetCoreServer\RadiumRest.Plugin.DotNetCore.csproj" />
   </ItemGroup>
 
   <ItemGroup>

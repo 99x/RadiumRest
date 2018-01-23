@@ -11,15 +11,15 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Linq;
 
 using RadiumRest.Core;
-using RadiumRest.Core.Server;
+using RadiumRest.Core.Plugin;
 
 using Microsoft.AspNetCore.Hosting;
 
 
 
-namespace RadiumRest.DotNetCoreServer
+namespace RadiumRest.Plugin.DotNetCore
 {
-    public class DotNetCoreServer : RadiumServer
+    public class DotNetCoreRadiumPlugin : RadiumPlugin
     {
         internal static Kernel KernalInstance { get; set; }
         protected override void Listen()

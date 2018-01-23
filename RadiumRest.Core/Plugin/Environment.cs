@@ -8,7 +8,7 @@ using System.Reflection;
 using Newtonsoft.Json;
 using System.IO;
 
-namespace RadiumRest.Core.Server
+namespace RadiumRest.Core.Plugin
 {
     public class Environment
     {
