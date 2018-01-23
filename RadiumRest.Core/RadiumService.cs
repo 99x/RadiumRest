@@ -15,7 +15,7 @@ namespace RadiumRest
             return Activator.CreateInstance<T>();
         }
 
-        public static void Use<T>()
+        public static void Use<T>() where T: RadiumRest.RestResourceHandler
         {
 
         }

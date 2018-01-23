@@ -46,6 +46,7 @@ namespace RadiumRest.Core.Plugin
                     }
                     catch (Exception ex)
                     {
+                        Console.WriteLine(ex);
                         this.configuration = new Dictionary<string, object>();
                     }
                     finally

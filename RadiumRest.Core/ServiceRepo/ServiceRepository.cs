@@ -17,11 +17,11 @@ namespace RadiumRest.Core.ServiceRepo
         {
             get
             {
-                return getExecutionParams(method, reqUrl);
+                return GetExecutionParams(method, reqUrl);
             }
         }
 
-        private PathExecutionParams getExecutionParams(string method, string reqUrl)
+        private PathExecutionParams GetExecutionParams(string method, string reqUrl)
         {
             PathExecutionParams executionParams = null;
             bool isFound = false;
@@ -70,9 +70,11 @@ namespace RadiumRest.Core.ServiceRepo
 
             if (isFound)
             {
-                executionParams = new PathExecutionParams();
-                executionParams.ExecutionInfo = executionInfo;
-                executionParams.Parameters = variables;
+                executionParams = new PathExecutionParams
+                {
+                    ExecutionInfo = executionInfo,
+                    Parameters = variables
+                };
             }
 
             return executionParams;
@@ -146,13 +148,15 @@ namespace RadiumRest.Core.ServiceRepo
                                 if (methodAttribObject != null)
                                 {
                                     var methodAttrib = (RestPath)methodAttribObject;
-                                    string finalUrl = baseUrl + (methodAttrib.Path == null ? "" : methodAttrib.Path);
+                                    string finalUrl = baseUrl + (methodAttrib.Path ?? "");
                                     
                                     var finalMethod = methodAttrib.Method;
 
-                                    PathExecutionInfo exeInfo = new PathExecutionInfo();
-                                    exeInfo.Type = typ;
-                                    exeInfo.Method = method;
+                                    PathExecutionInfo exeInfo = new PathExecutionInfo
+                                    {
+                                        Type = typ,
+                                        Method = method
+                                    };
                                     AddExecutionInfo(finalMethod, finalUrl, exeInfo);
                                 }
                             }
@@ -162,6 +166,7 @@ namespace RadiumRest.Core.ServiceRepo
                 }
                 catch (Exception ex)
                 {
+                    Console.WriteLine(ex);
                 }
             }
         }
