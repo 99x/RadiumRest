@@ -89,13 +89,13 @@
       <Project>{ad344dd7-84cc-4fbe-b3ec-bbf77a0c4897}</Project>
       <Name>RadiumRest.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\RadiumRest.CustomerMicroservice\RadiumRest.CustomerMicroservice.csproj">
-      <Project>{d6341d6b-be56-4382-aeb6-2d4295187614}</Project>
-      <Name>RadiumRest.CustomerMicroservice</Name>
-    </ProjectReference>
     <ProjectReference Include="..\RadiumRest.Plugin.AspDotNet\RadiumRest.Plugin.AspDotNet.csproj">
       <Project>{6eaa30d0-478f-4cbe-bd04-6fb5b72183a0}</Project>
       <Name>RadiumRest.Plugin.AspDotNet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RadiumRest.Sample.CustomerMicroservice\RadiumRest.Sample.CustomerMicroservice.csproj">
+      <Project>{d6341d6b-be56-4382-aeb6-2d4295187614}</Project>
+      <Name>RadiumRest.Sample.CustomerMicroservice</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
