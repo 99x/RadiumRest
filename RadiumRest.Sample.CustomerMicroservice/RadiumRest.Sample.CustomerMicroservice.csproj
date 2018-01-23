@@ -7,8 +7,8 @@
     <ProjectGuid>{D6341D6B-BE56-4382-AEB6-2D4295187614}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RadiumRest.CustomerMicroservice</RootNamespace>
-    <AssemblyName>RadiumRest.CustomerMicroservice</AssemblyName>
+    <RootNamespace>RadiumRest.Sample.CustomerMicroservice</RootNamespace>
+    <AssemblyName>RadiumRest.Sample.CustomerMicroservice</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

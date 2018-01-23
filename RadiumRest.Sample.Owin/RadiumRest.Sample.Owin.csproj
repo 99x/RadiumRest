@@ -7,8 +7,8 @@
     <ProjectGuid>{6D358147-FFDB-4A62-8426-49F820690023}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RadiumRest.DotNetFrameworkSample</RootNamespace>
-    <AssemblyName>RadiumRest.DotNetFrameworkSample</AssemblyName>
+    <RootNamespace>RadiumRest.Sample.Owin</RootNamespace>
+    <AssemblyName>RadiumRest.Sample.Owin</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
