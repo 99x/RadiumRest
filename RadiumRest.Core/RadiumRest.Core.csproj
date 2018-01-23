@@ -64,6 +64,7 @@
     <Compile Include="Messaging\RadiumResponse.cs" />
     <Compile Include="Plugin\Environment.cs" />
     <Compile Include="Plugin\RadiumPlugin.cs" />
+    <Compile Include="RadiumServer.cs" />
     <Compile Include="ServiceRepo\ParameterMismatchException.cs" />
     <Compile Include="ServiceRepo\PathExecutionInfo.cs" />
     <Compile Include="ServiceRepo\PathExecutionParams.cs" />

@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+using RadiumRest;
 using RadiumRest.Plugin.AspDotNet;
 
 namespace RadiumRest.Sample.AspDotNet
 {
     public class Startup : IHttpHandler
     {
+
         public bool IsReusable
         {
             get { return false; }
@@ -16,9 +18,10 @@ namespace RadiumRest.Sample.AspDotNet
 
         public void ProcessRequest(HttpContext context)
         {
-            var tmp = new RadiumRest.Sample.CustomerMicroservice.Resources.Customer.CustomerModel();
-            var requestHandler = new AspDotNetRadiumPlugin();
-            requestHandler.Handle(context);
+            RadiumServer.Use<RadiumRest.Sample.CustomerMicroservice.Resources.Customer.CustomerModel>();
+
+            var server = RadiumServer.Create<AspDotNetRadiumPlugin>();
+            server.Handle(context);
         }
     }
 }
