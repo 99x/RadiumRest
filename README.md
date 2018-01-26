@@ -43,7 +43,7 @@ Using filters developers could perform business specific functionality such as a
 
 ## Architecture of RadiumREST
 
-![alt text](https://github.com/99xt/RadiumRest/raw/master/doc/architecture.png)
+![alt text](https://github.com/99xt/RadiumRest/raw/master/doc/architecture.png | width=300)
 
 Integration Plugins:
 Filter Manager: 
