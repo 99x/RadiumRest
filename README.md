@@ -63,6 +63,8 @@ Microservice Specific Filters: Consists of the business specific filters.
 
 #### Creating a REST web application
 
+In order to create a REST web application or a microservice a developer should first specify the resource handler RadiumREST should use, create a server instance using a particular integration plugin (i.e. a plugin for .NET Core), and start the server. Optionally the developer could specify the port of the server through the configuration file of the web application.
+
 ```csharp
 using RadiumRest;
 using RadiumRest.Plugin.DotNetCore;
@@ -73,9 +75,13 @@ namespace RadiumRest.Sample.DotNetCore
     {
         public static void Main(string[] args)
         {
-            RadiumService.Use<CustomerService>();
+            //Specify the REST resource handlers RadiumRest should use
+            RadiumService.Use<CustomerService>(); 
 
+            //Create the server with a particular integration plugin
             var server = RadiumService.Create<DotNetCoreRadiumPlugin>();
+
+            //Start the server
             server.Start();
         }
     }
@@ -84,6 +90,8 @@ namespace RadiumRest.Sample.DotNetCore
 
 
 #### Creating a Resource
+
+In order to create a REST resource the developer should create a class and inherit the base class RestResourceHandler. Then the developer could specify the REST resource which that handle should handle using the RestResource attribute. Next the related routes of the particular resource can be specified using the RestPath attribute. The RestPath attribute also enables the developer to map path parameters to the method parameters of the class.
 
 ```csharp
 using RadiumRest;
@@ -123,6 +131,8 @@ namespace CustomerMicroservice
 
 #### Creating a Filter
 
+In order to create a filter the developer should inherit the base class AbstractFilter and overide the method Process and include the logic of the filter. To prevent the execution the FilterResponse.Success must be set to false. When that value is set to false the developer could specify the message and the HTTP status code the HTTP response should return. If the developer prefers to send data to the ResourceHandler he could include such data in the variable DataBag as a key value pair.
+
 ```csharp
     using RadiumRest;
     using RadiumRest.Core.Filters;
@@ -149,8 +159,15 @@ namespace CustomerMicroservice
 
 #### Registering a Response Formatter
 
+If the developer prefers to serialize a message for a particular content type, he could use a ResponseFormatter plugin. In the main application the developer could specify the formatter.
+
 ```csharp
+    //Create the server using a particular plugin
     var server = RadiumService.Create<DotNetCoreRadiumPlugin>();
-    server.Kernel.RegisterFormatter<RadiumRest.Core.Formatters.JSONSchemaFormatter>();
+    
+    //Integrate the JsonSchemaFormatter plugin
+    server.Kernel.RegisterFormatter<JSONSchemaFormatter>();
+
+    //Start the server
     server.Start();
 ```
