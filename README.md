@@ -3,7 +3,7 @@
 RadiumREST is a Micoframework that enables you to easily develop REST web applications, and microservices using C# and host the application in any .NET compatible hosting environment such as .NET Core, OWIN, or IIS. Therefore the deployment decicision can be made even at a later stage of the project.
 
 
-## Problems RadiumREST aims to solve
+## Features of RadiumREST
 
 #### Create REST Resources Using C# classes 
 
@@ -37,12 +37,23 @@ RadiumREST enables the developer to losely couple their business logic from tech
 
 RadiumREST enables the developers to extend the framework using plugins. Developers can use response formatter plugins to serialize any response of the service to a particular format based on the content type of the request. In addition to that plugins can be developped to support any hosting environment such as IIS, .NET Core, or self hosting using OWIN.
 
+#### Use Filters to intercept HTTP requests before processing
 
-## Features of RadiumREST
+Using filters developers could perform business specific functionality such as authorization and caching in their REST endpoints. Any auth provider or cache provider can be integrated using this mechanism.
 
 ## Architecture of RadiumREST
 
-## Hosting RadiumREST Microservices
+![alt text](https://github.com/99xt/RadiumRest/raw/master/doc/architecture.png)
+
+Integration Plugins:
+Filter Manager: 
+Service Invoker: 
+Response Formatter:
+Resource Repository:
+Rest Resource Handlers:
+Microservice Specific Filters:
+
+## Hosting 
 
 ## Examples
 
