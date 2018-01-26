@@ -1,13 +1,13 @@
-# RadiumREST - Microframework for .NET
+# RadiumREST - A Portable Microframework for .NET
 
-RadiumREST is a Micoframework that enables you to easily develop REST web applications, and microservices using C# and host the application in any .NET compatible hosting environment such as .NET Core, OWIN, or IIS. Therefore the deployment decicision can be made even at a later stage of the project.
+RadiumREST enables you to easily develop REST web applications and Microservices using C# and host the applications in .NET CLR compatible runtime environment such as .NET Core, OWIN self hosting, or IIS. Therefore REST Web applications and microservices written using RadiumREST are portable among such environments. As a result deployment decisions can be taken even at a later stage of a project.
 
 
 ## Features of RadiumREST
 
 #### Create REST Resources Using C# classes 
 
-RadiumREST provides a productive programming paradigm that enables the developers to use C# classs to create REST resources and routes. This approach is similar to ASP.NET MVC but endpoints exposed using RadiumREST are compatible with any hosting environment
+RadiumREST provides a productive programming paradigm that enables the developers to use C# classs to create REST resources and routes.  Following example shows an implementation of a REST resource exposed as GET /customers/@id, where @id is a path parameter in the HTTP request.
 
 ```csharp
     [RestResource("customers")]
@@ -17,29 +17,29 @@ RadiumREST provides a productive programming paradigm that enables the developer
         [RestPath("GET", "/@id")]
         public CustomerModel GetCustomer(int id)
         {
-            //Your business logic
+            //Your business logic goes here
         }
     }
 ```
 
 
-#### Write maintainable and portable microservices
+#### Write Maintainable and Portable Microservices
 
-Rest resources created using RadiumREST can be hosted in any environment such as .NET core, IIS, or as a self hosted application. Plugins can be created for each hosting environment. currently plugins are available for .NET core, IIS, and OWIN self hosting.
-
-
-#### Losely couple business logic from hosting technology
-
-RadiumREST enables the developer to losely couple their business logic from technology which enables the developer to make hosting decisions even at a later stage of a project with less amount of coding changes. The developers can keep the REST resources, and business logic in a seperate class library and import that library to another project which also imports the relevent hosting plugin.
+Rest resources created using RadiumREST can be executed in any CLR compatible runtime environment such as .NET core, IIS, or as a self hosted application. Integration plugins can be created for each runtime environment. Currently plugins are available for .NET core, IIS, and OWIN self hosting.
 
 
-#### Extend the framework using plugins
+#### Losely Couple Business logic From the Runtime Environment
 
-RadiumREST enables the developers to extend the framework using plugins. Developers can use response formatter plugins to serialize any response of the service to a particular format based on the content type of the request. In addition to that plugins can be developped to support any hosting environment such as IIS, .NET Core, or self hosting using OWIN.
+RadiumREST enables the developer to losely couple their business logic from technology which enables the developer to make hosting decisions even at a later stage of a project with a very minimum amount of coding changes. The developers can keep the REST resources, and business logic in a seperate C# class library, and the hosting logic in a seperate integration plugin.
 
-#### Use Filters to intercept HTTP requests before processing
 
-Using filters developers could perform business specific functionality such as authorization and caching in their REST endpoints. Any auth provider or cache provider can be integrated using this mechanism.
+#### Extend the Framework Using Plugins
+
+RadiumREST enables the developers to extend the framework using plugins. Developers can use Response Formatting plugins to serialize responses of the REST Resource Handlers to a particular format according to the content type of the HTTP request (i.e. application/json or application/xml). In addition to that plugins can be developped to support any runtime environment such as IIS, .NET Core, or self hosting using OWIN.
+
+#### Filters to Intercept HTTP Requests Before Processing
+
+Using filters developers could perform business specific functionality such as authorization or caching before processing the HTTP request using the REST Resource Handler. 
 
 ## Architecture of RadiumREST
 
