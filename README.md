@@ -58,16 +58,99 @@ Rest Resource Handlers: Consists of the business logic to handle a particular RE
 
 Microservice Specific Filters: Consists of the business specific filters.
 
-## Hosting 
-
 
 ## Examples
 
+#### Creating a REST web application
 
-### Creating a Resource
+```csharp
+using RadiumRest;
+using RadiumRest.Plugin.DotNetCore;
+
+namespace RadiumRest.Sample.DotNetCore
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            RadiumService.Use<CustomerService>();
+
+            var server = RadiumService.Create<DotNetCoreRadiumPlugin>();
+            server.Start();
+        }
+    }
+}
+```
 
 
-### Creating a Filter
+#### Creating a Resource
+
+```csharp
+using RadiumRest;
+
+namespace CustomerMicroservice
+{
+
+    [RestResource("customers")]
+    public class CustomerService : RestResourceHandler
+    {
+
+        [RestPath("GET", "/@id")]
+        public CustomerModel GetCustomer(int id)
+        {           
+            var customerRepository = new CustomerRepository();
+            return customerRepository.GetCustomerById(id);
+        }
+
+        [RestPath("GET")]
+        public List<CustomerModel> GetAllCustomers()
+        {
+            var customerRepository = new CustomerRepository();
+            return customerRepository.GetAllCustomers();
+        }
+
+        [RestPath("POST")]
+        public List<CustomerModel> CreateCustomer()
+        {
+            return customerRepository.CreateCustomer(this.Request.Body);
+        }
+
+    }
+}
+
+```
 
 
-### Registering a Response Formatter
+#### Creating a Filter
+
+```csharp
+    using RadiumRest;
+    using RadiumRest.Core.Filters;
+
+    public class AuthorizationFilter : AbstractFilter
+    {
+        public override void Process()
+        {
+            
+            var authData = Authorizer.Authorize(Request.Body.userName, Request.Body.password);
+
+            if (!authData.isSuccess){
+                this.FilterResponse.StatusCode = 403;
+                this.FilterResponse.Message = "Unauthorized";
+                this.FilterResponse.Success = false;
+            } else {
+                DataBag.Add("authData", authData);
+            }
+
+        }
+    }
+```
+
+
+#### Registering a Response Formatter
+
+```csharp
+    var server = RadiumService.Create<DotNetCoreRadiumPlugin>();
+    server.Kernel.RegisterFormatter<RadiumRest.Core.Formatters.JSONSchemaFormatter>();
+    server.Start();
+```
