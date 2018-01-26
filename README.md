@@ -7,7 +7,7 @@ RadiumREST enables you to easily develop REST web applications and Microservices
 
 ## Features of RadiumREST
 
-#### Create REST Resources Using C# classes 
+### Create REST Resources Using C# classes 
 
 RadiumREST provides a productive programming paradigm that enables the developers to use C# classs to create REST resources and routes.  Following example shows an implementation of a REST resource exposed as GET /customers/@id, where @id is a path parameter in the HTTP request.
 
@@ -25,21 +25,21 @@ RadiumREST provides a productive programming paradigm that enables the developer
 ```
 
 
-#### Write Maintainable and Portable Microservices
+### Write Maintainable and Portable Microservices
 
 Rest resources created using RadiumREST can be executed in any CLR compatible runtime environment such as .NET core, IIS, or as a self hosted application. Integration plugins can be created for each runtime environment. Currently plugins are available for .NET core, IIS, and OWIN self hosting.
 
 
-#### Losely Couple Business logic From the Runtime Environment
+### Losely Couple Business logic From the Runtime Environment
 
 RadiumREST enables the developer to losely couple their business logic from technology which enables the developer to make hosting decisions even at a later stage of a project with a very minimum amount of coding changes. The developers can keep the REST resources, and business logic in a seperate C# class library, and the hosting logic in a seperate integration plugin.
 
 
-#### Extend the Framework Using Plugins
+### Extend the Framework Using Plugins
 
 RadiumREST enables the developers to extend the framework using plugins. Developers can use Response Formatting plugins to serialize responses of the REST Resource Handlers to a particular format according to the content type of the HTTP request (i.e. application/json or application/xml). In addition to that plugins can be developped to support any runtime environment such as IIS, .NET Core, or self hosting using OWIN.
 
-#### Filters to Intercept HTTP Requests Before Processing
+### Filters to Intercept HTTP Requests Before Processing
 
 Using filters developers could perform business specific functionality such as authorization or caching before processing the HTTP request using the REST Resource Handler. 
 
@@ -63,7 +63,7 @@ Microservice Specific Filters: Consists of the business specific filters.
 
 ## Examples
 
-#### Creating a REST web application
+### Creating a REST web application
 
 In order to create a REST web application or a microservice a developer should first specify the resource handler RadiumREST should use, create a server instance using a particular integration plugin (i.e. a plugin for .NET Core), and start the server. Optionally the developer could specify the port of the server through the configuration file of the web application.
 
@@ -91,7 +91,7 @@ namespace RadiumRest.Sample.DotNetCore
 ```
 
 
-#### Creating a Resource
+### Creating a Resource
 
 In order to create a REST resource the developer should create a class and inherit the base class RestResourceHandler. Then the developer could specify the REST resource which that handle should handle using the RestResource attribute. Next the related routes of the particular resource can be specified using the RestPath attribute. The RestPath attribute also enables the developer to map path parameters to the method parameters of the class.
 
@@ -131,7 +131,7 @@ namespace CustomerMicroservice
 ```
 
 
-#### Creating a Filter
+### Creating a Filter
 
 In order to create a filter the developer should inherit the base class AbstractFilter and overide the method Process and include the logic of the filter. To prevent the execution the FilterResponse.Success must be set to false. When that value is set to false the developer could specify the message and the HTTP status code the HTTP response should return. If the developer prefers to send data to the ResourceHandler he could include such data in the variable DataBag as a key value pair.
 
@@ -159,7 +159,7 @@ In order to create a filter the developer should inherit the base class Abstract
 ```
 
 
-#### Registering a Response Formatter
+### Registering a Response Formatter
 
 If the developer prefers to serialize a message for a particular content type, he could use a ResponseFormatter plugin. In the main application the developer could specify the formatter.
 
