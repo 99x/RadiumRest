@@ -43,22 +43,31 @@ Using filters developers could perform business specific functionality such as a
 
 ## Architecture of RadiumREST
 
-![alt text](https://github.com/99xt/RadiumRest/raw/master/doc/architecture.png | width=300)
+![alt text](https://github.com/99xt/RadiumRest/raw/master/doc/architecture.png)
 
-Integration Plugins:
-Filter Manager: 
-Service Invoker: 
-Response Formatter:
-Resource Repository:
-Rest Resource Handlers:
-Microservice Specific Filters:
+Integration Plugins: Enables the developers to include plugins to support a particular hosting environment.
+
+Filter Manager: Enables the developers to create filters to intercept HTTP requests and handle functionalities such as authorization or caching.
+
+Resource Repository: Consists of information (i.e. routes and their respective classes and methods to handle the routes) about the REST resources created using the framework.
+
+Service Invoker: When a REST request is being recieved, this component creates an instance of the relevent class and invokes the relavent method to handle the request. 
+Response Formatter: Once the request is processed, this component serializes the response to a particular format according to the content type of the http request.
+
+Rest Resource Handlers: Consists of the business logic to handle a particular REST request.
+
+Microservice Specific Filters: Consists of the business specific filters.
 
 ## Hosting 
 
+
 ## Examples
+
 
 ### Creating a Resource
 
+
 ### Creating a Filter
+
 
 ### Registering a Response Formatter
